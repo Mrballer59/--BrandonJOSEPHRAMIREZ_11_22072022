@@ -9,6 +9,7 @@ function App() {
     <div className="App">
       <Header />
       <Banner text="Chez vous, partout et ailleurs" img={banner} />
+      <Footer />
     </div>
   );
 }
