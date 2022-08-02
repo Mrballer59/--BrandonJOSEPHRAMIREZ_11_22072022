@@ -20,14 +20,14 @@ function App() {
   }, []);
   return (
     <div className="App">
-      <Header />
+      {/* <Header /> */}
       <Banner text="Chez vous, partout et ailleurs" img={banner} />
-      <section class="imgDisplay">
+      <section className="imgDisplay">
         {products.map((product) => (
           <Product src={product.cover} id={product.id} title={product.title} />
         ))}
       </section>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
