@@ -1,0 +1,17 @@
+h7 {
+  font-size: 288px;
+  font-weight: 700;
+}
+.section_error {
+  text-align: center;
+  padding: 100px;
+  color: var(--main);
+}
+.section_error p {
+  font-size: 36px;
+  margin-bottom: 200px;
+}
+.homrLink {
+  font-size: 36px;
+  text-decoration: underline;
+}

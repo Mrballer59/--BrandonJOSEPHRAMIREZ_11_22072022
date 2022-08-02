@@ -1,0 +1,30 @@
+.Propos {
+  max-width: 1023px;
+  margin: 0 auto;
+}
+.dropdownList {
+  margin: 50px 0;
+}
+.dp_Header {
+  color: var(--white);
+  background-color: var(--main);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 47px;
+  padding: 0 18px;
+  border-radius: 5px;
+}
+h3 {
+  font-size: 24px;
+}
+.dropdownList p {
+  color: var(--main);
+  font-size: 24px;
+  font-weight: 400;
+  background-color: var(--grey);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin: 0;
+  padding: 36px 18px 19px 18px;
+}
