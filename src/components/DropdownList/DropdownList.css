@@ -2,7 +2,7 @@
   max-width: 1023px;
   margin: 0 auto;
 }
-.dropdownList {
+.droplist {
   margin: 50px 0;
 }
 .dp_Header {
@@ -18,7 +18,7 @@
 h3 {
   font-size: 24px;
 }
-.dropdownList p {
+.droplist p {
   color: var(--main);
   font-size: 24px;
   font-weight: 400;
