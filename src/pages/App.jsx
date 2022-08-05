@@ -5,6 +5,7 @@ import banner from "../assets/banner.png";
 import Footer from "../components/Footer/Footer";
 import Product from "../components/Products/Product";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 function App() {
@@ -18,16 +19,21 @@ function App() {
       })
       .catch((err) => console.log);
   }, []);
+
   return (
     <div className="App">
-      {/* <Header /> */}
       <Banner text="Chez vous, partout et ailleurs" img={banner} />
       <section className="imgDisplay">
         {products.map((product) => (
-          <Product src={product.cover} id={product.id} title={product.title} />
+          <Link to={`/stayDetails/${product.id}`} key={product.id}>
+            <Product
+              src={product.cover}
+              id={product.id}
+              title={product.title}
+            />
+          </Link>
         ))}
       </section>
-      {/* <Footer /> */}
     </div>
   );
 }
