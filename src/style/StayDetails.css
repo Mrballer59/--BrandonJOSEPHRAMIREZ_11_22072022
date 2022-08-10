@@ -15,3 +15,26 @@ h6 {
   font-weight: 100;
   padding-right: 10px;
 }
+.listingDropDown {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 100px;
+}
+.accomodationDetails {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 0 0 0;
+}
+.accomodationDetails img {
+  height: 64px;
+  width: 64px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.tagsSection {
+  display: flex;
+}
+.hostListing {
+  display: flex;
+  align-items: center;
+}

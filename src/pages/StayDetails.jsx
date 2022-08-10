@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Tag from "../components/Tags/Tag";
 import DropDown from "../components/DropdownList/DropdownList";
+import RatingStars from "../components/Stars/RatingStars";
 
 const StayDetails = () => {
   const [product, setProduct] = useState(null);
@@ -34,6 +35,9 @@ const StayDetails = () => {
             <h6>{product && product.location}</h6>
             <div className="tagsSection">
               {product && product.tags.map((tag) => <Tag tagName={tag} />)}
+              {/* {product &&
+                product.rating.map((star) => <RatingStars tagName={star} />)} */}
+              {/* <ratingStars ratingValue={product && product.rating} /> */}
             </div>
           </div>
           <div className="hostListing">
