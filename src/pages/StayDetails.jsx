@@ -5,7 +5,10 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Tag from "../components/Tags/Tag";
 import DropDown from "../components/DropdownList/DropdownList";
-import RatingStars from "../components/Stars/RatingStars";
+import leftArrow from "../assets/leftArr.png";
+import rightArrow from "../assets/rightArr.png";
+// import RatingStars from "../components/Stars/RatingStars";
+import Slider from "../components/Slider/Slider";
 
 const StayDetails = () => {
   const [product, setProduct] = useState(null);
@@ -25,10 +28,40 @@ const StayDetails = () => {
       .catch((err) => console.log);
   }, []);
 
+  const [current, setCurrent] = useState(0);
+  const length = product && product.pictures.length;
+
+  function nextSlide() {
+    setCurrent(current === length - 1 ? 0 : current + 1);
+  }
+
+  function previousSlide() {
+    setCurrent(current === 0 ? length - 1 : current - 1);
+  }
+
   return (
     <div className="listing">
       <section className="listingSection">
-        <div className="carousel"></div>
+        <div className="slider">
+          <img
+            src={leftArrow}
+            alt="back"
+            className="arrowLeft"
+            onClick={previousSlide}
+          />
+          <img
+            src={rightArrow}
+            alt="next"
+            className="arrowRight"
+            onClick={nextSlide}
+          />
+          {product &&
+            product.pictures.map((picture, index) => {
+              if (index === current) {
+                return <img src={picture} className="photo" />;
+              }
+            })}
+        </div>
         <div className="accomodationDetails">
           <div>
             <h4>{product && product.title}</h4>

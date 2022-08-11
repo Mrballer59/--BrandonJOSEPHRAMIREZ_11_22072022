@@ -8,27 +8,31 @@ h6 {
 h4 {
   font-size: 36px;
 }
+h5 {
+  padding-left: 200px;
+  padding-right: 15px;
+  text-align: right;
+}
 
 h5,
 h6 {
   font-size: 18px;
-  font-weight: 100;
   padding-right: 10px;
 }
 .listingDropDown {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   grid-gap: 100px;
+  grid-template-columns: repeat(2, 1fr);
 }
 .accomodationDetails {
-  display: flex;
-  justify-content: space-between;
   margin: 50px 0 0 0;
+  justify-content: space-between;
+  display: flex;
 }
 .accomodationDetails img {
-  height: 64px;
-  width: 64px;
   object-fit: cover;
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
 }
 .tagsSection {
@@ -37,4 +41,9 @@ h6 {
 .hostListing {
   display: flex;
   align-items: center;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
