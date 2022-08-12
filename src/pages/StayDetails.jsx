@@ -40,63 +40,61 @@ const StayDetails = () => {
   }
 
   return (
-    <div className="listing">
-      <section className="listingSection">
-        <div className="slider">
-          <img
-            src={leftArrow}
-            alt="back"
-            className="arrowLeft"
-            onClick={previousSlide}
-          />
-          <img
-            src={rightArrow}
-            alt="next"
-            className="arrowRight"
-            onClick={nextSlide}
-          />
-          {product &&
-            product.pictures.map((picture, index) => {
-              if (index === current) {
-                return <img src={picture} className="photo" />;
-              }
-            })}
-        </div>
-        <div className="accomodationDetails">
-          <div>
-            <h4>{product && product.title}</h4>
-            <h6>{product && product.location}</h6>
-            <div className="tagsSection">
-              {product && product.tags.map((tag) => <Tag tagName={tag} />)}
-              {/* {product &&
-                product.rating.map((star) => <RatingStars tagName={star} />)} */}
-              {/* <ratingStars ratingValue={product && product.rating} /> */}
-            </div>
-          </div>
-          <div className="hostListing">
-            <h5>{product && product.host.name}</h5>
-            <img
-              src={product && product.host.picture}
-              alt={product && product.host.name}
-            />
-          </div>
-        </div>
-        <div className="listingDropDown">
-          <DropDown title="Description" text={product && product.description} />
-          <DropDown
-            title="Équipements"
-            text={
-              product &&
-              product.equipments.map((equipment) => (
-                <ul>
-                  <li>{equipment}</li>
-                </ul>
-              ))
+    <section className="listingSection">
+      <div className="slider">
+        <img
+          src={leftArrow}
+          alt="back"
+          className="arrowLeft"
+          onClick={previousSlide}
+        />
+        <img
+          src={rightArrow}
+          alt="next"
+          className="arrowRight"
+          onClick={nextSlide}
+        />
+        {product &&
+          product.pictures.map((picture, index) => {
+            if (index === current) {
+              return <img src={picture} className="photo" />;
             }
+          })}
+      </div>
+      <div className="accomodationDetails">
+        <div>
+          <h4>{product && product.title}</h4>
+          <h6>{product && product.location}</h6>
+          <div className="tagsSection">
+            {product && product.tags.map((tag) => <Tag tagName={tag} />)}
+            {/* {product &&
+                product.rating.map((star) => <RatingStars tagName={star} />)} */}
+            {/* <ratingStars ratingValue={product && product.rating} /> */}
+          </div>
+        </div>
+        <div className="hostListing">
+          <h5>{product && product.host.name}</h5>
+          <img
+            src={product && product.host.picture}
+            alt={product && product.host.name}
           />
         </div>
-      </section>
-    </div>
+      </div>
+      <div className="listingDropDown">
+        <DropDown title="Description" text={product && product.description} />
+        <DropDown
+          title="Équipements"
+          text={
+            product &&
+            product.equipments.map((equipment) => (
+              <ul>
+                <li>{equipment}</li>
+              </ul>
+            ))
+          }
+        />
+      </div>
+    </section>
   );
 };
 

@@ -1,4 +1,3 @@
-import "../style/Propos.css";
 import bannerHeader from "../assets/kalen-emsley-Bkci_8qcdvQ-unsplash 2.png";
 import Banner from "../components/Banner/Banner";
 import DropdownList from "../components/DropdownList/DropdownList";

@@ -5,5 +5,13 @@
   border-radius: 10px;
   font-size: 14px;
   padding: 5px 40px;
-  margin-right: 10px;
+  margin: 0 10px 0 0;
+}
+.tagsSection {
+  padding: 10px 0;
+}
+@media screen and (max-width: 430px) {
+  .tags {
+    border-radius: 5px;
+  }
 }
