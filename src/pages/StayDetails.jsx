@@ -7,7 +7,6 @@ import Tag from "../components/Tags/Tag";
 import DropDown from "../components/DropdownList/DropdownList";
 import leftArrow from "../assets/leftArr.png";
 import rightArrow from "../assets/rightArr.png";
-// import RatingStars from "../components/Stars/RatingStars";
 import Slider from "../components/Slider/Slider";
 
 const StayDetails = () => {
@@ -38,6 +37,19 @@ const StayDetails = () => {
   function previousSlide() {
     setCurrent(current === 0 ? length - 1 : current - 1);
   }
+  // add the function for the stars with icon font awesome
+  function showRating() {
+    const starRating = [
+      null,
+      "oneStar",
+      "twoStars",
+      "threeStars",
+      "fourStars",
+      "fiveStars",
+    ];
+    console.log(starRating);
+    return "stars " + starRating[parseInt(product && product.rating)];
+  }
 
   return (
     <section className="listingSection">
@@ -67,17 +79,17 @@ const StayDetails = () => {
           <h6>{product && product.location}</h6>
           <div className="tagsSection">
             {product && product.tags.map((tag) => <Tag tagName={tag} />)}
-            {/* {product &&
-                product.rating.map((star) => <RatingStars tagName={star} />)} */}
-            {/* <ratingStars ratingValue={product && product.rating} /> */}
           </div>
         </div>
-        <div className="hostListing">
-          <h5>{product && product.host.name}</h5>
-          <img
-            src={product && product.host.picture}
-            alt={product && product.host.name}
-          />
+        <div className="hostPart">
+          <div className="hostListing">
+            <h5>{product && product.host.name}</h5>
+            <img
+              src={product && product.host.picture}
+              alt={product && product.host.name}
+            />
+          </div>
+          <aside className={showRating()}></aside>
         </div>
       </div>
       <div className="listingDropDown">
