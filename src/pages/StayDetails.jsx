@@ -69,7 +69,7 @@ const StayDetails = () => {
         {product &&
           product.pictures.map((picture, index) => {
             if (index === current) {
-              return <img src={picture} className="photo" />;
+              return <img key={index} src={picture} className="photo" />;
             }
           })}
       </div>
@@ -78,7 +78,8 @@ const StayDetails = () => {
           <h4>{product && product.title}</h4>
           <h6>{product && product.location}</h6>
           <div className="tagsSection">
-            {product && product.tags.map((tag) => <Tag tagName={tag} />)}
+            {product &&
+              product.tags.map((tag) => <Tag key={tag} tagName={tag} />)}
           </div>
         </div>
         <div className="hostPart">
@@ -99,7 +100,7 @@ const StayDetails = () => {
           text={
             product &&
             product.equipments.map((equipment) => (
-              <ul>
+              <ul key={equipment}>
                 <li>{equipment}</li>
               </ul>
             ))

@@ -17,7 +17,7 @@ function DropdownList({ title, text, extra }) {
           onClick={() => setDropList(false)}
         />
       </div>
-      <p>{text}</p>
+      <div className="dd">{text}</div>
     </div>
   ) : (
     <div className="droplist">

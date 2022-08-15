@@ -25,7 +25,7 @@ function App() {
       <Banner text="Chez vous, partout et ailleurs" img={banner} />
       <section className="imgDisplay">
         {products.map((product) => (
-          <Link to={`/stayDetails/${product.id}`}>
+          <Link key={product.id} to={`/stayDetails/${product.id}`}>
             <Product
               src={product.cover}
               id={product.id}
