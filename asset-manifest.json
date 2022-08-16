@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/--BrandonJOSEPHRAMIREZ_11_22072022/static/css/main.e8bc4e4a.css",
+    "main.js": "/--BrandonJOSEPHRAMIREZ_11_22072022/static/js/main.d9c440b7.js",
+    "static/media/kalen-emsley-Bkci_8qcdvQ-unsplash 2.png": "/--BrandonJOSEPHRAMIREZ_11_22072022/static/media/kalen-emsley-Bkci_8qcdvQ-unsplash 2.cc7a05da2ad0e783537a.png",
+    "static/media/banner.png": "/--BrandonJOSEPHRAMIREZ_11_22072022/static/media/banner.024f945a990ae17b81b7.png",
+    "static/media/LOGO.svg": "/--BrandonJOSEPHRAMIREZ_11_22072022/static/media/LOGO.bb7954d079ad9bef972bd967db960404.svg",
+    "static/media/Logo-footer.svg": "/--BrandonJOSEPHRAMIREZ_11_22072022/static/media/Logo-footer.ee689fd9409d1b5a898b4247819d8a00.svg",
+    "index.html": "/--BrandonJOSEPHRAMIREZ_11_22072022/index.html",
+    "main.e8bc4e4a.css.map": "/--BrandonJOSEPHRAMIREZ_11_22072022/static/css/main.e8bc4e4a.css.map",
+    "main.d9c440b7.js.map": "/--BrandonJOSEPHRAMIREZ_11_22072022/static/js/main.d9c440b7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e8bc4e4a.css",
+    "static/js/main.d9c440b7.js"
+  ]
+}
