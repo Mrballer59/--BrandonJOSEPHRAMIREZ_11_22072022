@@ -8,6 +8,7 @@ import DropDown from "../components/DropdownList/DropdownList";
 import leftArrow from "../assets/leftArr.png";
 import rightArrow from "../assets/rightArr.png";
 import Slider from "../components/Slider/Slider";
+import Error from "./Error";
 
 const StayDetails = () => {
   const [product, setProduct] = useState(null);
@@ -51,7 +52,9 @@ const StayDetails = () => {
     return "stars " + starRating[parseInt(product && product.rating)];
   }
 
-  return (
+  return product === undefined ? (
+    <Error />
+  ) : (
     <section className="listingSection">
       <div className="slider">
         <img
